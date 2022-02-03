@@ -2,6 +2,11 @@ defmodule SieveTest do
   use ExUnit.Case
   doctest Sieve
 
+  test "1 is not prime" do
+    primes = Sieve.make(10)
+    assert Sieve.is_prime?(1, primes) == false
+  end
+
   test "7 is prime" do
     primes = Sieve.make(10)
     assert Sieve.is_prime?(7, primes) == true
