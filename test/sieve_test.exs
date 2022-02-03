@@ -31,4 +31,9 @@ defmodule SieveTest do
     primes = Sieve.make(100)
     assert primes |> Tuple.to_list() |> Enum.filter(&(&1)) |> Enum.count() == 25
   end
+
+  test "there are 168 prime numbers less than 1000" do
+    primes = Sieve.make(1000)
+    assert primes |> Tuple.to_list() |> Enum.filter(&(&1)) |> Enum.count() == 168
+  end
 end
