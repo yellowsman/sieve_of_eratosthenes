@@ -1,9 +1,9 @@
-defmodule Eratosthenes.MixProject do
+defmodule Sieve.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :eratosthenes,
+      app: :sieve,
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
