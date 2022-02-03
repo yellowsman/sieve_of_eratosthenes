@@ -18,7 +18,7 @@ defmodule Sieve do
   defp screen(tuple, limit, index) when limit >= index do
     cond do
       elem(tuple, index) ->
-        Enum.reduce(index..tuple_size(tuple)//index, tuple, &Kernel.put_elem(&2, &1, false))
+        Enum.reduce(index..tuple_size(tuple)-1//index, tuple, &Kernel.put_elem(&2, &1, false))
         |> screen(limit, index + 1)
 
       true ->
